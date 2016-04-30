@@ -288,6 +288,7 @@ class DraftEditor
               customStyleMap={
                 {...DefaultDraftInlineStyle, ...this.props.customStyleMap}
               }
+              customStyleFn={this.props.customStyleFn}
               editorKey={this._editorKey}
               editorState={this.props.editorState}
             />

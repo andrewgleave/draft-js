@@ -93,7 +93,7 @@ class DraftEditorContents extends React.Component {
   }
 
   render(): React.Element {
-    const {blockRendererFn, customStyleMap, editorState} = this.props;
+    const {blockRendererFn, customStyleMap, customStyleFn, editorState} = this.props;
     const content = editorState.getCurrentContent();
     const selection = editorState.getSelection();
     const forceSelection = editorState.mustForceSelection();
@@ -127,6 +127,7 @@ class DraftEditorContents extends React.Component {
         block,
         blockProps: customProps,
         customStyleMap,
+        customStyleFn,
         decorator,
         direction,
         forceSelection,
