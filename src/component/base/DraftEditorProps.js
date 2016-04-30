@@ -133,5 +133,5 @@ export type DraftEditorProps = {
 
   // Provide a function that will construct CSS style objects given inline
   // style names.
-  customStyleFn?: (style: DraftInlineStyle) => Object
+  customStyleFn?: (style: DraftInlineStyle) => ?Object
 };
