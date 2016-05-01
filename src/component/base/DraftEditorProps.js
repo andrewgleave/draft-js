@@ -13,8 +13,9 @@
 'use strict';
 
 import type ContentBlock from 'ContentBlock';
-import type {DraftEditorCommand} from 'DraftEditorCommand';
+import type {DraftBlockRenderMap} from 'DraftBlockRenderMap';
 import type {DraftDragType} from 'DraftDragType';
+import type {DraftEditorCommand} from 'DraftEditorCommand';
 import type {DraftTextAlignment} from 'DraftTextAlignment';
 import type {DraftInlineStyle} from 'DraftInlineStyle';
 import type EditorState from 'EditorState';
@@ -134,4 +135,9 @@ export type DraftEditorProps = {
   // Provide a function that will construct CSS style objects given inline
   // style names.
   customStyleFn?: (style: DraftInlineStyle) => ?Object
+
+  // Provide a map of block rendering configurations. Each block type maps to
+  // an element tag and am optional react element wrapper. This configuration
+  // is used for both rendering and paste processing.
+  blockRenderMap: DraftBlockRenderMap,
 };
